@@ -14,7 +14,7 @@ function UpdateTitle() {
 
   const GetTitle = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/api/v1/title/title/${id}`);
+      const res = await fetch(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/title/title/${id}`);
       const data = await res.json();
 
       setgetTitle(data.titleName);
@@ -31,7 +31,7 @@ function UpdateTitle() {
 
   const updateContent = () => {
     axios
-      .put(`http://localhost:8080/api/v1/title/editTitle`, {
+      .put(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/title/editTitle`, {
         id: id,
         titleName: titleName,
       })

@@ -11,7 +11,7 @@ function Home() {
 
   const getCourseData = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/api/v1/course/viewCourse`);
+      const res = await fetch(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/viewCourse`);
       const data = await res.json();
       console.log(data.data);
       const total = res.headers.get("x-total-count");
@@ -28,7 +28,7 @@ function Home() {
   const deletecourse = (id) => {
     alert("Are you sure to delete this record!");
     axios
-      .delete(`http://localhost:8080/api/v1/course/course/${id}`)
+      .delete(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/course/${id}`)
       .then((response) => {
         setCourseList(
           CourseList.filter((items) => {

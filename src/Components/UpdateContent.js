@@ -15,7 +15,7 @@ function UpdateContent() {
   const getContent = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/content/content/${id}`
+        `http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/content/content/${id}`
       );
       const data = await res.json();
 
@@ -31,7 +31,7 @@ function UpdateContent() {
 
   const updateContent = () => {
     axios
-      .put(`http://localhost:8080/api/v1/content/editContent`, {
+      .put(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/content/editContent`, {
         contentId: id,
         contentTitle: contentTopic,
         content: content,

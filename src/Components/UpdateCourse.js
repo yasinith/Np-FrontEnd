@@ -13,7 +13,7 @@ function UpdateCourse() {
   const Getcourse = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/course/course/${id}`
+        `http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/course/${id}`
       );
       const data = await res.json();
 
@@ -30,7 +30,7 @@ function UpdateCourse() {
 
   const updateCourse = () => {
     axios
-      .put(`http://localhost:8080/api/v1/course/updateCourse`, {
+      .put(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/updateCourse`, {
         id : id,
         courseTitle: courseName,
       })

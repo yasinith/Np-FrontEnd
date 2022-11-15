@@ -13,7 +13,7 @@ function AddContent() {
 
   const addContent = () => {
     axios
-      .post(`http://localhost:8080/api/v1/title/addTitle`, {
+      .post(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/title/addTitle`, {
         titleName: courseTopic,
         course: { id: id },
       })
@@ -27,7 +27,7 @@ function AddContent() {
   const Getcourse = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/course/course/${id}`
+        `http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/course/${id}`
       );
       const data = await res.json();
 

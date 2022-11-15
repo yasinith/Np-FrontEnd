@@ -15,7 +15,7 @@ function Content() {
   const getcontent = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/title/getTitleByCourseId/${id}`
+        `http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/title/getTitleByCourseId/${id}`
       );
       const data = await res.json();
       console.log(data);
@@ -31,7 +31,7 @@ function Content() {
   const Getcourse = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/course/course/${id}`
+        `http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/course/${id}`
       );
       const data = await res.json();
 
@@ -47,7 +47,7 @@ function Content() {
   const deleteTopic = (id) => {
     alert("Are you sure to delete this record!");
     axios
-      .delete(`http://localhost:8080/api/v1/title/deleteTitle/${id}`)
+      .delete(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/title/deleteTitle/${id}`)
       .then((response) => {
         setTopicList(
           TopicList.filter((items) => {

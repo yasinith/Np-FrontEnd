@@ -15,7 +15,7 @@ function ContentView() {
 
   const getTitle = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/api/v1/title/title/${id}`);
+      const res = await fetch(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/title/title/${id}`);
       const data = await res.json();
       console.log(data.data);
 
@@ -31,7 +31,7 @@ function ContentView() {
   const getcontent = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/content/getContentByTitleId/${id}`
+        `http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/content/getContentByTitleId/${id}`
       );
       const data = await res.json();
       setContent(data);
@@ -46,7 +46,7 @@ function ContentView() {
   const deleteContent = (id) => {
     alert("Are you sure to delete this record!");
     axios
-      .delete(`http://localhost:8080/api/v1/content/deleteContent/${id}`)
+      .delete(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/content/deleteContent/${id}`)
       .then((response) => {
         setContentList(
           contentList.filter((items) => {

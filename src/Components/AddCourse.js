@@ -7,7 +7,7 @@ function AddCourse() {
 
   const addCourse = () => {
     axios
-      .post(`http://localhost:8080/api/v1/course/addCourse`, {
+      .post(`http://http://npbackend-env.eba-5vh5vmtw.us-east-1.elasticbeanstalk.com/api/v1/course/addCourse`, {
         courseTitle: courseName,
       })
       .then(() => {
